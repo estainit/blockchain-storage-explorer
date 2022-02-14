@@ -34,6 +34,7 @@ contract BadKing {
     
     // This should trigger King fallback(), making this contract the king
     function becomeKing() public payable {  
+        // send eth to contract and determinig the gas fee
         (bool success, ) = payable(address(0xbB2557b8e60b13b83eAb56951ffF5F9AB89293A0)).call{value: 2000000000000000, gas: 95500}("");
         require(success);
     }
