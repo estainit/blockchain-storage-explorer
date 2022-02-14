@@ -1,15 +1,10 @@
-# Basic Sample Hardhat Project
+# Simple blockchain storage explorer
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
+Just enter the contract number and memory word counts. you will get them encoded.
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+    await ethers.provider.getStorageAt(
+        contractAddress,
+        location
+    );
 ```
